@@ -7,7 +7,7 @@ import CreateList from "./components/create-list.component";
 import EditMovies from "./components/edit-movies.component";
 import MoviesList from "./components/movies-list.component";
 
-import logo from "./logo.png";
+import logo from "./images/logo.png";
 
 class App extends Component{
   render(){
