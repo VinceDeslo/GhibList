@@ -5,7 +5,7 @@ export default class EditMovies extends Component{
     render(){
         return(
             <div>
-                <p> Edit movies component.</p>
+                <p> Edit list component.</p>
             </div>
         )
     }
