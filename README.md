@@ -15,4 +15,4 @@ This is a first introduction to Node.js, React.js and MongoDB.
 
 ## Authors
 
-* **Vincent Desloover**
+* **Vincent Desloover** - (VinceDeslo)
