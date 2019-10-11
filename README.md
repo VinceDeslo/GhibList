@@ -13,3 +13,6 @@ This is a first introduction to Node.js, React.js and MongoDB.
 - [ ] Link application to the Studio Ghibli API for resource access.
 - [ ] Add user authentification.
 
+## Authors
+
+* **Vincent Desloover**
