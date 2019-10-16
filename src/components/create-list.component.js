@@ -48,7 +48,8 @@ export default class CreateList extends Component{
 
         console.log('Form submitted:');
         console.log('List Description: $[this.state.list_description]');
-        console.log('List Priority: $[]this.state.list_priority');
+        console.log('List Owner: $[this.state.list_owner]');
+        console.log('List Priority: $[this.state.list_priority]');
 
         this.setState({
             list_description: '',
@@ -63,12 +64,59 @@ export default class CreateList extends Component{
             <div style = {{marginTop: 10}}>
                 <h3>Create New List</h3>
                 <form onSubmit={this.onSubmit}>
-                    <div>
+                    
+                    <div className = "form-group">
+                        <label>Description:</label>
+                        <input type = "text"
+                               className = "form-control"
+                               value = {this.state.list_description}
+                               onChange = {this.onChangeListDescription}
+                        />
+                    </div>
                         
+                    <div className = "form-group">
+                        <div className = "form-check formp-check-inline">
+                            <input className = "form-check-input"
+                                    type="radio"
+                                    name="priorityOptions"
+                                    id="priorityLow"
+                                    value="Low"
+                                    checked={this.state.list_priority=="Low"}
+                                    onChange={this.onChangeListPriority}
+                            />
+                            <label className="form-check-label">Low</label>
+                        </div>
+
+                        <div className = "form-check formp-check-inline">
+                            <input className = "form-check-input"
+                                    type="radio"
+                                    name="priorityOptions"
+                                    id="priorityMedium"
+                                    value="Medium"
+                                    checked={this.state.list_priority=="Medium"}
+                                    onChange={this.onChangeListPriority}
+                            />
+                            <label className="form-check-label">Medium</label>
+                        </div>
+
+                        <div className = "form-check formp-check-inline">
+                            <input className = "form-check-input"
+                                    type="radio"
+                                    name="priorityOptions"
+                                    id="priorityHigh"
+                                    value="High"
+                                    checked={this.state.list_priority=="High"}
+                                    onChange={this.onChangeListPriority}
+                            />
+                            <label className="form-check-label">High</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <input type ="submit" value ="Create List" className = "btn btn-primary"/>
                     </div>
                 </form>
             </div>
         )
     }
-
 }
