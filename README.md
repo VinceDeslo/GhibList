@@ -8,8 +8,8 @@ This is a first introduction to Node.js, React.js and MongoDB.
 
 ## Task List
 - [x] Create React.js project.
-- [ ] Implement basic UI components of the web app.
-- [ ] Implement back-end with MongoDB for storage of user lists.
+- [x] Implement basic UI components of the web app.
+- [x] Implement back-end with MongoDB for storage of user lists.
 - [ ] Link application to the Studio Ghibli API for resource access.
 - [ ] Add user authentification.
 
