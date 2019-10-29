@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
-export default class EditMovies extends Component{
+export default class EditMovie extends Component{
 
     render(){
         return(
             <div>
-                <p> Edit list component.</p>
+                <p> Edit movie component.</p>
             </div>
         )
     }

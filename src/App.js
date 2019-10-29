@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import CreateList from "./components/create-list.component";
-import EditMovies from "./components/edit-movies.component";
-import MoviesList from "./components/movies-list.component";
+import AddMovie from "./components/add-movie.component";
+import EditMovie from "./components/edit-movie.component";
+import Movies from "./components/movies-list.component";
 
 import logo from "./images/logo.png";
 
@@ -30,7 +29,7 @@ class App extends Component{
                   <Link to="/" className="nav-link">Movies</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/create" className="nav-link">Create List</Link>
+                  <Link to="/create" className="nav-link">Add Movie</Link>
                 </li>
               </ul>
             </div>
@@ -38,9 +37,9 @@ class App extends Component{
           </nav>
           <br/>
 
-          <Route path="/" exact component = {MoviesList}/>
-          <Route path="/edit:id" exact component = {EditMovies}/>
-          <Route path="/create" exact component = {CreateList}/>
+          <Route path="/" exact component = {Movies}/>
+          <Route path="/edit:id" exact component = {EditMovie}/>
+          <Route path="/create" exact component = {AddMovie}/>
         </div>
 
       </Router>
