@@ -24,7 +24,7 @@ export default class Movies extends Component{
     }
 
     // HTTP fetch of the database contents
-    componentMounted(){
+    componentDidMount(){
         axios.get('http://localhost:4000/ghiblist/')
              .then(response => {
                 this.setState({ movies: response.data});
@@ -49,11 +49,11 @@ export default class Movies extends Component{
                 <table className="table table-striped" style={{ marginTop:20}}>
                     <thead>
                         <tr>
-                            <tr>Name</tr>
-                            <tr>Description</tr>
-                            <tr>Year</tr>
-                            <tr>Priority</tr>
-                            <tr>Action</tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Year</th>
+                            <th>Priority</th>
+                            <th>State</th>
                         </tr>
                     </thead>
                     <tbody>

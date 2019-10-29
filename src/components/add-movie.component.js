@@ -20,7 +20,7 @@ export default class AddMovie extends Component{
             movie_description: '',
             movie_year: '',
             movie_priority: '',
-            movie_watched: ''
+            movie_watched: false
         }
     }
 
