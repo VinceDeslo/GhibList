@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 
 export default class CreateList extends Component{
 
@@ -51,6 +52,17 @@ export default class CreateList extends Component{
         console.log('List Owner: $[this.state.list_owner]');
         console.log('List Priority: $[this.state.list_priority]');
 
+        const newList = {
+            list_description: this.state.list_description,
+            list_owner: this.state.list_owner,
+            list_priority: this.state.list_priority,
+            list_completed: this.state.list_completed
+        }
+
+        // Connection to back-end
+        axios.post('http://localhost:4000/ghiblists/add', newList)
+             .then(res => console.log(res.data));
+
         this.setState({
             list_description: '',
             list_owner:'',
@@ -71,6 +83,15 @@ export default class CreateList extends Component{
                                className = "form-control"
                                value = {this.state.list_description}
                                onChange = {this.onChangeListDescription}
+                        />
+                    </div>
+
+                    <div className = "form-group">
+                        <label>Owner:</label>
+                        <input type = "text"
+                               className = "form-control"
+                               value = {this.state.list_owner}
+                               onChange = {this.onChangeListOwner}
                         />
                     </div>
                         
