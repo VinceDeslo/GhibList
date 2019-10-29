@@ -60,20 +60,22 @@ export default class AddMovie extends Component{
         e.preventDefault();
 
         console.log('Form submitted:');
+        console.log('Movie Name: $[this.state.movie_name]');
         console.log('Movie Description: $[this.state.movie_description]');
         console.log('Movie Year: $[this.state.movie_year]');
         console.log('Movie Priority: $[this.state.movie_priority]');
         console.log('Movie Watched: $[this.state.movie_watched]');
 
         const newMovie = {
+            movie_name: this.state.movie_name,
             movie_description: this.state.movie_description,
             movie_year: this.state.movie_year,
             movie_priority: this.state.movie_priority,
             movie_watched: this.state.movie_watched
         }
 
-        // Connection to back-end for adding new lists
-        axios.post('http://localhost:4000/ghiblists/add', newMovie)
+        // Connection to back-end for adding a new movie
+        axios.post('http://localhost:4000/ghiblist/add', newMovie)
              .then(res => console.log(res.data));
 
         // State initialization

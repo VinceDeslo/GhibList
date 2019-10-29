@@ -9,7 +9,7 @@ const Movie = props => (
         <td>{props.movie.movie_description}</td>
         <td>{props.movie.movie_year}</td>
         <td>{props.movie.movie_priority}</td>
-        <td>{props.movie.movie_completed}</td>
+        <td>{props.movie.movie_watched}</td>
         <td>
             <Link to={"/edit/"+props.movie._id}>Edit</Link>
         </td>
@@ -20,14 +20,14 @@ export default class Movies extends Component{
 
     constructor(props){
         super(props);
-        this.state = {lists: []};
+        this.state = {movies: []};
     }
 
-    // HTTP fecth of the database contents
+    // HTTP fetch of the database contents
     componentMounted(){
-        axios.get('http://localhost:4000/ghiblists')
+        axios.get('http://localhost:4000/ghiblist/')
              .then(response => {
-                this.setState({ lists: response.data});
+                this.setState({ movies: response.data});
              })
              .catch(function (error){
                 console.log(error);
@@ -36,7 +36,7 @@ export default class Movies extends Component{
 
     // Generation of the list
     movieList(){
-        return this.state.lists.map(function(currentList, i){
+        return this.state.movies.map(function(currentMovie, i){
             return <Movie movie={currentMovie} key = {i}/>;
         })
     }
@@ -45,6 +45,7 @@ export default class Movies extends Component{
     render(){
         return(
             <div>
+                <h3>Movies List</h3>
                 <table className="table table-striped" style={{ marginTop:20}}>
                     <thead>
                         <tr>

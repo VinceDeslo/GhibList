@@ -11,11 +11,11 @@ let Movie = require('./movie.model');
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use('/ghiblists', movieRoutes);
+app.use('/ghiblist', movieRoutes);
 
 
 // mongoose connection initialization
-mongoose.connect('mongodb://127.0.0.1:27017/ghiblists', { useNewUrlParser: true });
+mongoose.connect('mongodb://127.0.0.1:27017/ghiblist', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 // Connect mongoose to MongoDB
@@ -27,12 +27,12 @@ connection.once('open', function() {
 // Create endpoint to obtain all movie items
 movieRoutes.route('/').get(function(req,res){
   
-    Movie.find(function(err, movie){
+    Movie.find(function(err, movies){
         if(err) {
             console.log(err);
         }
         else{
-            res.json(movie);
+            res.json(movies);
         }
     });
 });
@@ -47,7 +47,7 @@ movieRoutes.route('/:id').get(function(req,res){
     });
 });
 
-// Create route permitting to add new movies
+// Create endpoint permitting to add new movies
 movieRoutes.route('/add').post(function(req, res){
 
     let movie = new Movie(req.body);

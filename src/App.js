@@ -29,7 +29,7 @@ class App extends Component{
                   <Link to="/" className="nav-link">Movies</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/create" className="nav-link">Add Movie</Link>
+                  <Link to="/add" className="nav-link">Add Movie</Link>
                 </li>
               </ul>
             </div>
@@ -39,7 +39,7 @@ class App extends Component{
 
           <Route path="/" exact component = {Movies}/>
           <Route path="/edit:id" exact component = {EditMovie}/>
-          <Route path="/create" exact component = {AddMovie}/>
+          <Route path="/add" exact component = {AddMovie}/>
         </div>
 
       </Router>
