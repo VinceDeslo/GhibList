@@ -53,7 +53,7 @@ export default class Movies extends Component{
                             <th>Description</th>
                             <th>Year</th>
                             <th>Priority</th>
-                            <th>State</th>
+                            <th>Watched</th>
                         </tr>
                     </thead>
                     <tbody>

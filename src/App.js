@@ -17,7 +17,7 @@ class App extends Component{
 
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             
-            <a class= "navbar-brand" href="gttps://ghiblist.com" target="_blank">
+            <a class="navbar-brand" href="gttps://ghiblist.com" target="_blank">
               <img src={logo} width="90" height="90" alt="GhibList.com" />
             </a>
 
@@ -38,7 +38,7 @@ class App extends Component{
           <br/>
 
           <Route path="/" exact component = {Movies}/>
-          <Route path="/edit:id" exact component = {EditMovie}/>
+          <Route path="/edit/:id" exact component = {EditMovie}/>
           <Route path="/add" exact component = {AddMovie}/>
         </div>
 

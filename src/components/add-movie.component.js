@@ -129,7 +129,7 @@ export default class AddMovie extends Component{
                                     name="priorityOptions"
                                     id="priorityLow"
                                     value="Low"
-                                    checked={this.state.movie_priority=="Low"}
+                                    checked={this.state.movie_priority==="Low"}
                                     onChange={this.onChangeMoviePriority}
                             />
                             <label className="form-check-label">Low</label>
@@ -141,7 +141,7 @@ export default class AddMovie extends Component{
                                     name="priorityOptions"
                                     id="priorityMedium"
                                     value="Medium"
-                                    checked={this.state.movie_priority=="Medium"}
+                                    checked={this.state.movie_priority==="Medium"}
                                     onChange={this.onChangeMoviePriority}
                             />
                             <label className="form-check-label">Medium</label>
@@ -153,7 +153,7 @@ export default class AddMovie extends Component{
                                     name="priorityOptions"
                                     id="priorityHigh"
                                     value="High"
-                                    checked={this.state.movie_priority=="High"}
+                                    checked={this.state.movie_priority==="High"}
                                     onChange={this.onChangeMoviePriority}
                             />
                             <label className="form-check-label">High</label>
