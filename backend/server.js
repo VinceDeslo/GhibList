@@ -1,9 +1,11 @@
+// Frameworks
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
+// Backend constants
 const PORT = 4000;
 const movieRoutes = express.Router();
 
@@ -22,7 +24,6 @@ const connection = mongoose.connection;
 connection.once('open', function() {
     console.log("MongoDB database connection established successfully");
 });
-
 
 // Create endpoint to obtain all movie items
 movieRoutes.route('/').get(function(req,res){
