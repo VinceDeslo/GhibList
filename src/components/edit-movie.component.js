@@ -26,19 +26,21 @@ export default class EditMovie extends Component{
 
     // HTTP call to fetch the specific movie information
     componentDidMount(){
-        axios.get('http://localhost:4000/ghiblist/'+this.props.match.params._id)
-             .then(response => {
-                 this.setState({
+
+        axios.get('http://localhost:4000/ghiblist/'+this.props.match.params.id)
+            .then(response => {
+                console.log(response)
+                this.setState({
                     movie_name: response.data.movie_name,
                     movie_description: response.data.movie_description,
                     movie_year: response.data.movie_year,
                     movie_priority: response.data.movie_priority,
                     movie_watched: response.data.movie_watched
-                 })
-             })
-             .catch(function (error) {
-                 console.log(error);
-             })
+                })
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
     }
 
     // Event handlers for user modifications

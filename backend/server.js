@@ -41,7 +41,7 @@ movieRoutes.route('/').get(function(req,res){
 // Create endpoint to obtain movie item via id value
 movieRoutes.route('/:id').get(function(req,res){
    
-    let id = req.param.id;
+    let id = req.params.id;
    
     Movie.findById(id, function(err,movie){
         res.json(movie);
