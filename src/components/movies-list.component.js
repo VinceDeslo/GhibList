@@ -9,7 +9,7 @@ const Movie = props => (
         <td>{props.movie.movie_description}</td>
         <td>{props.movie.movie_year}</td>
         <td>{props.movie.movie_priority}</td>
-        <td>{props.movie.movie_watched}</td>
+        <td>{props.movie.movie_watched ? '\u2714' :'-'}</td>
         <td>
             <Link to={"/edit/"+props.movie._id}>Edit</Link>
         </td>
@@ -37,6 +37,7 @@ export default class Movies extends Component{
     // Generation of the list
     movieList(){
         return this.state.movies.map(function(currentMovie, i){
+
             return <Movie movie={currentMovie} key = {i}/>;
         })
     }
