@@ -14,12 +14,12 @@ is built.
 - [x] Create React.js project.
 - [x] Implement basic UI components of the web app.
 - [x] Implement back-end with MongoDB for storage of user lists.
-- [ ] Connect React frontend to Backend with Axios.
+- [x] Connect React frontend to Backend with Axios.
 - [ ] Link application to the Studio Ghibli API for resource access.
 - [ ] Add user authentification and login.
 
 ## Expansion ideas
-- Replace user description with explandable synopsis.
+- Replace user description with expandable synopsis.
 - Add a rating system once watched.
 
 ## Authors
