@@ -15,7 +15,7 @@ is built.
 - [x] Implement basic UI components of the web app.
 - [x] Implement back-end with MongoDB for storage of user lists.
 - [x] Connect React frontend to Backend with Axios.
-- [ ] Implement Login and Register component functionality.
+- [x] Implement Login and Register form functionality.
 - [ ] Implement back-end for user authentification.
 - [ ] Link application to the Studio Ghibli API for resource access.
 
