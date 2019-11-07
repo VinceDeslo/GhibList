@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Card, Logo, Form, Input, Button} from '../components/AuthForm';
+import {Card, Form, Input, Button} from '../AuthForm';
 import {Link} from 'react-router-dom';
 
 export default class Register extends Component{
