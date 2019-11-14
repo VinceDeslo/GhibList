@@ -1,6 +1,7 @@
 // General imports
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import * as cnst from './constants';
 
 // Bootstrap imports
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,6 +22,7 @@ class App extends Component{
   render(){
 
     return(
+      <AuthContext.Provider value={{authTokens, setAuthTokens : setTokens}}>
       <Router>
     
         <div className = "container">
@@ -76,6 +78,7 @@ class App extends Component{
         </div>
 
       </Router>
+      </AuthContext.Provider>
     );
   }
 }
